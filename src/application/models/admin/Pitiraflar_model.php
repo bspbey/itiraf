@@ -40,4 +40,11 @@ class Pitiraflar_model extends CI_Model {
     $this->db->set('itiraf_goruntulenme', ($count->itiraf_goruntulenme + 1));
     $this->db->update('brkdndr_itiraflar');
     }
+
+    public function brkdndr_admin_son_itiraf(){
+        $this->db->select('brkdndr_itiraflar.*');
+        $this->db->where('brkdndr_itiraflar.itiraf_durum', 1);
+        $query = $this->db->get('brkdndr_itiraflar')->result();
+        return $query;
+    }
 }
