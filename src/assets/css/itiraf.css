@@ -1,0 +1,24 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+.yorum{border:1px solid #cccccc;border-radius:5px;padding:10px;}
+.sosyal_paylas .fa{font-size:20px;border-radius:36px;min-width:36px;padding: 8px 0px 8px 8px;vertical-align:top;line-height:1;}
+.sosyal_paylas a{position:relative;display:block;float:left;margin:5px;color:#fff;}
+.sosyal_paylas .fa-facebook{background:#3b5998;}
+.sosyal_paylas .fa-twitter{background:#00aced;}
+.sosyal_paylas .fa-whatsapp{background:#4dc247;}
+.sosyal_paylas .fa-linkedin{background:#007bb5;}
+.sosyal_paylas .fa-google-plus{background:#dd4b39;}
+.btnsyl{border-radius:36px;position: relative;width: 36px;height: 36px;margin-left: 10px;}
+.btnsylfa{border-radius:36px;position: relative;width: 36px;height: 36px;}
+.iletisim_pass .fa-facebook{color:#3b5998;}
+.iletisim_pass .fa-twitter{color:#00aced;}
+.iletisim_pass .fa-whatsapp{color:#4dc247;}
+.iletisim_pass .fa-linkedin{color:#007bb5;}
+.iletisim_pass .fa-google-plus{color:#dd4b39;}
