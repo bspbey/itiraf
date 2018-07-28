@@ -36,4 +36,4 @@ bu alana scriptin kurulu olduğu dizini yazın.
   
   # Eğer kurulumda bir sorun çıkarsa veya yardımcı olabileceğim bir konu olursa bana sosyal medya adreslerimden ve https://www.burakdundar.com/iletisim adresinden ulaşabilirsiniz.
   
-  Not: Bu script tamamen açık kaynak ve ücretsizdir. Kendinize göre düzenleyebilirsiniz...
+  Not: Bu script tamamen açık kaynak ve ücretsizdir. Kendinize göre düzenleyebilirsiniz
