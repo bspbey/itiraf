@@ -39,7 +39,7 @@ class Yorumlar extends CI_Controller {
         );
 
         $data['yorum'] = $this->yorumlar_model->get($where);
-        if (empty($data['yorum']->yorum_durum) || ($id == '')) {
+        if (is_null($data['yorum']->yorum_durum) || ($id == '')) {
             redirect(base_url("admin/yorumlar"));
         }
 

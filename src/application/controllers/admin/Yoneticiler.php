@@ -104,7 +104,7 @@ class Yoneticiler extends CI_Controller {
         );
 
         $data['yonetici'] = $this->yoneticiler_model->get($where);
-        if (empty($data['yonetici']->isActive) || ($id == '')) {
+        if (is_null($data['yonetici']->isActive) || ($id == '')) {
             redirect(base_url("admin/yoneticiler"));
         }
 

@@ -43,7 +43,7 @@ public function update_form($id){
     'title' => "İtiraf Düzenle | Admin Paneli"
     );
     $data['itiraf_icerik'] = $this->pitiraflar_model->get($where);
-    if (empty($data['itiraf_icerik']->itiraf_durum) || ($id == '')) {
+    if (is_null($data['itiraf_icerik']->itiraf_durum) || ($id == '')) {
         redirect(base_url("admin/itiraflar"));
     }
 

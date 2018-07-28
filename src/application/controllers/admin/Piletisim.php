@@ -42,7 +42,7 @@ public function iletisim_icerik($id){
     );
 
     $data['iletisim'] = $this->adminpiletisim_model->get($where);
-    if (empty($data['iletisim']->iletisim_durum) || ($id == '')) {
+    if (is_null($data['iletisim']->iletisim_durum) || ($id == '')) {
         redirect(base_url("admin/iletisim"));
     }
 
