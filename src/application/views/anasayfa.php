@@ -61,17 +61,17 @@ if($alert){ ?>
 <textarea name="itiraf_icerik" class="form-control" rows="3" placeholder="Neyi itiraf ediyorsun ? :)"></textarea>
 </div>
 <div class="row">
-<div class="col-5">
+<div class="col-5 form-group">
 <input name="itiraf_rumuz" type="text" class="form-control" placeholder="Rumuz">
 </div>
-<div class="col-5">
+<div class="col-5 form-group">
 <select name="itiraf_cinsiyet" class="form-control">
 <option selected disabled>Cinsiyet</option>
 <option value="1">Erkek</option>
 <option value="2">Kadın</option>
 </select>
 </div>
-<div class="col-2">
+<div class="col-md-2 col-xs-2 col-sm-12 form-group">
 <input type="submit" class="btn btn-success btn-block" value="İtirafı gönder">
 </div>
 </div>
