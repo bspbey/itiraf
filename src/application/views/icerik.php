@@ -15,6 +15,7 @@ $itiraf_icerik_v2 = $metin;
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title><?php echo $itiraf_icerik->itiraf_rumuz; ?> İtirafı | <?php echo strip_tags($ayarlar->site_title); ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Burak Dündar" />
 <meta name="description" content="<?php echo strip_tags($ayarlar->site_description); ?>">
 <meta name="keywords" content="<?php echo strip_tags($ayarlar->site_keywords); ?>">
