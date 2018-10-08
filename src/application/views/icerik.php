@@ -141,7 +141,7 @@ if($alert){ ?>
 <h5 class="mt-0"><?php echo strip_tags($yorum->yorum_rumuz); ?></h5>
 <?php echo $yorum->yorum_icerik; ?>
 </div>
-</div>
+</div> 
 <?php endforeach; ?>
 </div>
 <footer class="py-5 bg-dark">
