@@ -11,7 +11,7 @@ Merhaba arkadaşlar, sizlere codeigniter ile yazmış olduğum üyeliksiz itiraf
 # Açıklama
 İtiraf veya dedikodu sitesi açmak isteyenlere tamamen açık kaynak kodlu uygun bir scripttir. Anasayfa kısmında StartBootstrap tarafından ücretsiz yayınlanan "Blog Home" ve "Blog Post" kullanılmıştır. Admin paneli kısmında StartBootstrap tarafından ücretsiz yayınlanan "SB Admin" kullanılmıştır. Kullanımı son derece basit ve kolaydır. Anasayfada kullanıcılar itiraflarını ve rumuzlarını yazıp paylaştıklarında admin paneline onaysız olarak düşmektedir, eğer adminler uygun görürlerse onaylayıp yayına alabilirler veya uygunsuz ifade oluşturduğu için silebilirler. Anasayfada gösterilecek olan itiraf sayısını "Genel Ayarlar" kısmından "Anasayfada görünecek olan itiraf sayısı" bölümünü doldurmaları yeterlidir.
 
-# Yönetim paneli bilgileri
+# Yönetim paneli bilgileri (demo panel bilgileri için bu adresten iletişime geçebilirsiniz: https://www.burakdundar.com/iletisim)
 website.com/admin
 Kullanıcı adı: admin@admin.com
 Şifre: 123456789
