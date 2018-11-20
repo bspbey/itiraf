@@ -17,7 +17,7 @@ $itiraf_icerik_v2 = $metin;
 <title><?php echo $itiraf_icerik->itiraf_rumuz; ?> İtirafı | <?php echo strip_tags($ayarlar->site_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Burak Dündar" />
-<meta name="description" content="<?php echo strip_tags($ayarlar->site_description); ?>">
+<meta name="description" content="<?php echo strip_tags($itiraf_icerik_v2); ?>...">
 <meta name="keywords" content="<?php echo strip_tags($ayarlar->site_keywords); ?>">
 <meta name="owner" content="Burak Dündar" />
 <meta name="copyright" content="Copyright Burak Dündar - Tüm Hakları Saklıdır." />
