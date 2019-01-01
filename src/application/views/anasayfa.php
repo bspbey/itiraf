@@ -93,8 +93,8 @@ $itiraf_icerik_v2 = $metin;
 <div class="card mb-4">
 <div class="card-header">
 <strong>Rumuz: <?php echo $row->itiraf_rumuz; ?></strong>
-<strong style="float:right;"><a href="#" data-toggle="modal" data-target="#paylas"><i data-toggle="tooltip" data-placement="top" title="Sosyal Medyada Paylaş" class="fa fa-share-alt-square"></i></a></strong>
-<div class="modal fade" id="paylas" tabindex="-1" role="dialog" aria-labelledby="paylas" aria-hidden="true">
+<strong style="float:right;"><a href="#" data-toggle="modal" data-target="#paylas<?php echo $row->id; ?>"><i data-toggle="tooltip" data-placement="top" title="Sosyal Medyada Paylaş" class="fa fa-share-alt-square"></i></a></strong>
+<div class="modal fade" id="paylas<?php echo $row->id; ?>" tabindex="-1" role="dialog" aria-labelledby="paylas<?php echo $row->id; ?>" aria-hidden="true">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
