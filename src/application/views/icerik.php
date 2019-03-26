@@ -14,7 +14,7 @@ $itiraf_icerik_v2 = $metin;
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title><?php echo $itiraf_icerik->itiraf_rumuz; ?> İtirafı | <?php echo strip_tags($ayarlar->site_title); ?></title>
+<title><?php echo strip_tags($itiraf_icerik->itiraf_rumuz); ?> İtirafı | <?php echo strip_tags($ayarlar->site_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Burak Dündar" />
 <meta name="description" content="<?php echo strip_tags($itiraf_icerik_v2); ?>...">
@@ -24,11 +24,11 @@ $itiraf_icerik_v2 = $metin;
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:site" content="@desponres"/>
 <meta name="twitter:url" content="<?php echo base_url(strip_tags("itiraf/".$itiraf_icerik->id)); ?>">
-<meta name="twitter:title" content="<?php echo $itiraf_icerik->itiraf_rumuz; ?> İtirafı">
+<meta name="twitter:title" content="<?php echo strip_tags($itiraf_icerik->itiraf_rumuz); ?> İtirafı">
 <meta name="twitter:description" content="<?php echo strip_tags($itiraf_icerik_v2); ?>...">
 <meta name="twitter:image" content="site_resmi_gelecek">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="<?php echo $itiraf_icerik->itiraf_rumuz; ?> İtirafı">
+<meta property="og:title" content="<?php echo strip_tags($itiraf_icerik->itiraf_rumuz); ?> İtirafı">
 <meta property="og:site_name" content="<?php echo strip_tags($ayarlar->site_title); ?>">
 <meta property="og:url" content="<?php echo base_url(strip_tags("itiraf/".$itiraf_icerik->id)); ?>">
 <meta property="og:image" content="site_resmi_gelecek">
@@ -66,7 +66,7 @@ if($alert){ ?>
 <?php } ?>
 <div class="card mb-4">
 <div class="card-header">
-<strong><?php echo $itiraf_icerik->itiraf_rumuz; ?></strong>
+<strong><?php echo strip_tags($itiraf_icerik->itiraf_rumuz); ?></strong>
 <strong style="float:right;"><a href="#" data-toggle="modal" data-target="#paylas<?php echo $itiraf_icerik->id; ?>"><i data-toggle="tooltip" data-placement="top" title="Sosyal Medyada Paylaş" class="fa fa-share-alt-square"></i></a></strong>
 <div class="modal fade" id="paylas<?php echo $itiraf_icerik->id; ?>" tabindex="-1" role="dialog" aria-labelledby="paylas<?php echo $itiraf_icerik->id; ?>" aria-hidden="true">
 <div class="modal-dialog" role="document">
@@ -81,9 +81,9 @@ if($alert){ ?>
 <div class="col-12">
 <div class="input-group mb-4 sosyal_paylas">
 <div class="btnsylfa facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>" target="_blank"><i class="fa fa-facebook"></i></a></div>
-<div class="btnsyl twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>&text=<?php echo $itiraf_icerik->itiraf_icerik; ?>" target="_blank"><i class="fa fa-twitter"></i></a></div>
+<div class="btnsyl twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>&text=<?php echo strip_tags($itiraf_icerik->itiraf_icerik); ?>" target="_blank"><i class="fa fa-twitter"></i></a></div>
 <div class="btnsyl whatsapp"><a href="whatsapp://send?text=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>" target="_blank"><i class="fa fa-whatsapp"></i></a></div>
-<div class="btnsyl linkedin"><a href="https://www.linkedin.com/shareArticle?url=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>&title=<?php echo $itiraf_icerik->itiraf_icerik; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></div>
+<div class="btnsyl linkedin"><a href="https://www.linkedin.com/shareArticle?url=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>&title=<?php echo strip_tags($itiraf_icerik->itiraf_icerik); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></div>
 <div class="btnsyl google-plus"><a href="https://plus.google.com/share?url=<?php echo base_url("itiraf/".$itiraf_icerik->id); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></div>
 </div>
 <div class="input-group mb-3">
@@ -102,7 +102,7 @@ if($alert){ ?>
 </div>
 </div>
 <div class="card-body">
-<p class="card-text"><?php echo $itiraf_icerik->itiraf_icerik; ?></p>
+<p class="card-text"><?php echo strip_tags($itiraf_icerik->itiraf_icerik); ?></p>
 </div>
 <div class="card-footer text-muted"><?php $tarih = $itiraf_icerik->createdAt; echo $this->fonksiyonlar->timeConvert($tarih); ?> - <?php if($itiraf_icerik->itiraf_cinsiyet=='1'){echo "Erkek"; } else if($itiraf_icerik->itiraf_cinsiyet=='2'){echo "Kadın"; } else { echo "Cinsiyet Belirtilmemiş";} ?></div>
 </div>
@@ -139,7 +139,7 @@ if($alert){ ?>
 <img class="d-flex mr-3 rounded-circle" src="<?php if($yorum->yorum_cinsiyet=='1'){echo base_url("assets/images/user_erkek.png"); } else if($yorum->yorum_cinsiyet=='2'){echo base_url("assets/images/user_kadin.png"); } else { echo base_url("assets/images/user.png"); } ?>" width="50" height="50">
 <div class="media-body">
 <h5 class="mt-0"><?php echo strip_tags($yorum->yorum_rumuz); ?></h5>
-<?php echo $yorum->yorum_icerik; ?>
+<?php echo strip_tags($yorum->yorum_icerik); ?>
 </div>
 </div> 
 <?php endforeach; ?>

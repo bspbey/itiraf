@@ -108,14 +108,14 @@ else if($uzunluk<$sinir){
 $itiraf_icerik_v2 = $metin;
 }
 ?>
-<!-- son yazilar -->
+<!-- son itiraflar -->
 <div class="card mb-2">
 <div class="card-body">
-<h6 class="card-title mb-1">Rumuz: <a target="_blank" href="<?php echo base_url("itiraf/$row->id"); ?>"><?php echo $row->itiraf_rumuz; ?></a></h6>
+<h6 class="card-title mb-1">Rumuz: <a target="_blank" href="<?php echo base_url("itiraf/$row->id"); ?>"><?php echo strip_tags($row->itiraf_rumuz); ?></a></h6>
 <p class="card-text small"><?php echo strip_tags($itiraf_icerik_v2); ?></p>
 </div>
 </div>
-<!-- son yazilar -->
+<!-- son itiraflar -->
 <?php } ?>
 </div>
 </div>

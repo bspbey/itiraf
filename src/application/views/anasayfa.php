@@ -92,7 +92,7 @@ $itiraf_icerik_v2 = $metin;
 ?>
 <div class="card mb-4">
 <div class="card-header">
-<strong>Rumuz: <?php echo $row->itiraf_rumuz; ?></strong>
+<strong>Rumuz: <?php echo strip_tags($row->itiraf_rumuz); ?></strong>
 <strong style="float:right;"><a href="#" data-toggle="modal" data-target="#paylas<?php echo $row->id; ?>"><i data-toggle="tooltip" data-placement="top" title="Sosyal Medyada Paylaş" class="fa fa-share-alt-square"></i></a></strong>
 <div class="modal fade" id="paylas<?php echo $row->id; ?>" tabindex="-1" role="dialog" aria-labelledby="paylas<?php echo $row->id; ?>" aria-hidden="true">
 <div class="modal-dialog" role="document">
@@ -107,9 +107,9 @@ $itiraf_icerik_v2 = $metin;
 <div class="col-12">
 <div class="input-group mb-4 sosyal_paylas">
 <div class="btnsylfa facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo base_url("itiraf/".$row->id); ?>" target="_blank"><i class="fa fa-facebook"></i></a></div>
-<div class="btnsyl twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo base_url("itiraf/".$row->id); ?>&text=<?php echo $row->itiraf_icerik; ?>" target="_blank"><i class="fa fa-twitter"></i></a></div>
+<div class="btnsyl twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo base_url("itiraf/".$row->id); ?>&text=<?php echo strip_tags($row->itiraf_icerik); ?>" target="_blank"><i class="fa fa-twitter"></i></a></div>
 <div class="btnsyl whatsapp"><a href="whatsapp://send?text=<?php echo base_url("itiraf/".$row->id); ?>" target="_blank"><i class="fa fa-whatsapp"></i></a></div>
-<div class="btnsyl linkedin"><a href="https://www.linkedin.com/shareArticle?url=<?php echo base_url("itiraf/".$row->id); ?>&title=<?php echo $row->itiraf_icerik; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></div>
+<div class="btnsyl linkedin"><a href="https://www.linkedin.com/shareArticle?url=<?php echo base_url("itiraf/".$row->id); ?>&title=<?php echo strip_tags($row->itiraf_icerik); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></div>
 <div class="btnsyl google-plus"><a href="https://plus.google.com/share?url=<?php echo base_url("itiraf/".$row->id); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></div>
 </div>
 <div class="input-group mb-3">
@@ -128,7 +128,7 @@ $itiraf_icerik_v2 = $metin;
 </div>
 </div>
 <div class="card-body">
-<p class="card-text"><?php echo $itiraf_icerik_v2; ?>...</p>
+<p class="card-text"><?php echo strip_tags($itiraf_icerik_v2); ?>...</p>
 <a href="<?php echo base_url("itiraf/".$row->id); ?>" class="btn btn-primary">Devamını oku &rarr;</a>
 </div>
 <div class="card-footer text-muted"><?php $tarih = $row->createdAt; echo $this->fonksiyonlar->timeConvert($tarih); ?> - <?php if($row->itiraf_cinsiyet=='1'){echo "Erkek"; } else if($row->itiraf_cinsiyet=='2'){echo "Kadın"; } else { echo "Cinsiyet Belirtilmemiş";} ?></div>

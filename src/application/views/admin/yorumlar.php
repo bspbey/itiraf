@@ -56,8 +56,8 @@ if($alert){ ?>
 <tbody>
 <?php foreach ($list as $row) { ?>
 <tr>
-<td><?php echo $row->yorum_icerik; ?></td>
-<td><?php echo $row->yorum_rumuz; ?></td>
+<td><?php echo strip_tags($row->yorum_icerik); ?></td>
+<td><?php echo strip_tags($row->yorum_rumuz); ?></td>
 <td><?php if($row->yorum_durum=="1") {echo "<span style='color:green;'>Aktif</span>";} else{echo "<span style='color:red;'>Aktif Değil</span>";} ?></td>
 <td><?php echo $row->createdAt; ?></td>
 <td><a href="<?php echo base_url("admin/yorumlar/duzenle/$row->id"); ?>" class="btn btn-sm btn-secondary">Düzenle</a> <a href="<?php echo base_url("admin/yorumlar/sil/$row->id"); ?>" class="btn btn-sm btn-danger">Sil</a></td>

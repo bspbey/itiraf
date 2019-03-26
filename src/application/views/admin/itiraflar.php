@@ -56,7 +56,7 @@ if($alert){ ?>
 <tbody>
 <?php foreach ($list as $row) { ?>
 <tr>
-<td><?php echo $row->itiraf_rumuz; ?></td>
+<td><?php echo strip_tags($row->itiraf_rumuz); ?></td>
 <td><?php echo $row->itiraf_goruntulenme; ?></td>
 <td><?php if($row->itiraf_durum=="1") {echo "<span style='color:green;'>Aktif</span>";} else{echo "<span style='color:red;'>Aktif Değil</span>";} ?></td>
 <td><?php echo $row->createdAt; ?></td>
