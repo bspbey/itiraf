@@ -10,7 +10,7 @@ class Admin extends CI_Controller {
     public function index(){
         
         //Yazıların listesini veritabanından getirme
-        $itiraf_listesi = $this->pitiraflar_model->brkdndr_admin_son_itiraf();
+        $itiraf_listesi = $this->pitiraflar_model->admin_son_itiraf();
         $viewData["itiraf_listesi"] = $itiraf_listesi;
         
         $data = array(

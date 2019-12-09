@@ -17,6 +17,12 @@ Kullanıcı adı: admin@admin.com
 Şifre: 123456789
 (Bu bilgileri daha sonra yönetim panelinden değiştirebilirsiniz.)
 
+# Eklenen ve Değiştirilen Kısımlar #
+--Veritabanı yapısı değiştirildi.
+--Veritabanı optimizasyonu yapıldı.
+--İtiraflar ve Yorumlar için onaylı ve onaysız seçeneği ayarlar paneline eklendi.
+--İtiraflar paylaşılırken isteğe bağlı görsel eklenilebilecek.
+
 # Kurulum
 ->application->config->config.php = bu dizindeki dosyanın içerisinde;
 

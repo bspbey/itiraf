@@ -33,6 +33,8 @@ class Ayarlar extends CI_Controller {
             "site_title" => $this->input->post("site_title"),
             "site_description" => $this->input->post("site_description"),
             "site_keywords" => $this->input->post("site_keywords"),
+            "itiraf_onay" => $this->input->post("itiraf_onay"),
+            "yorum_onay" => $this->input->post("yorum_onay"),
             "anasayfa_itiraf_sayisi" => $this->input->post("anasayfa_itiraf_sayisi"),
             "site_facebook" => $this->input->post("site_facebook"),
             "site_twitter" => $this->input->post("site_twitter"),

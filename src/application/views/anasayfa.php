@@ -56,20 +56,23 @@ if($alert){ ?>
 <?php } ?>
 <div class="card mb-4">
 <div class="card-body">
-<form action="<?php echo base_url("itiraf/ekle"); ?>" method="post">
+<form action="<?php echo base_url("itiraf/ekle"); ?>" method="post" enctype="multipart/form-data">
 <div class="form-group">
 <textarea name="itiraf_icerik" class="form-control" rows="3" placeholder="Neyi itiraf ediyorsun ? :)"></textarea>
 </div>
 <div class="row">
-<div class="col-5 form-group">
+<div class="col-4 form-group">
 <input name="itiraf_rumuz" type="text" class="form-control" placeholder="Rumuz">
 </div>
-<div class="col-5 form-group">
+<div class="col-2 form-group">
 <select name="itiraf_cinsiyet" class="form-control">
 <option selected disabled>Cinsiyet</option>
 <option value="1">Erkek</option>
 <option value="2">Kadın</option>
 </select>
+</div>
+<div class="col-4 form-group">
+<input type="file" name="itiraf_resim" class="form-control">
 </div>
 <div class="col-md-2 col-xs-2 col-sm-12 form-group">
 <input type="submit" class="btn btn-success btn-block" value="İtirafı gönder">
@@ -128,6 +131,9 @@ $itiraf_icerik_v2 = $metin;
 </div>
 </div>
 <div class="card-body">
+<?php if($row->itiraf_resim){ ?>
+<img src="<?php echo base_url("uploads/$row->itiraf_resim"); ?>" style="float:left;border-radius:15px;padding:5px;position:relative;left:-10px;" width="200">
+<?php } ?>
 <p class="card-text"><?php echo strip_tags($itiraf_icerik_v2); ?>...</p>
 <a href="<?php echo base_url("itiraf/".$row->id); ?>" class="btn btn-primary">Devamını oku &rarr;</a>
 </div>

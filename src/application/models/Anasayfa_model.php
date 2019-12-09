@@ -3,72 +3,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Anasayfa_model extends CI_Model {
 
-    public function brkdndr_anasayfa_son_itiraf(){
-        $this->db->select('brkdndr_itiraflar.*');
-        $this->db->where('brkdndr_itiraflar.itiraf_durum', 1);
-        $query = $this->db->get('brkdndr_itiraflar')->result();
+    public function anasayfa_son_itiraf(){
+        $this->db->select('itiraflar.*');
+        $this->db->where('itiraflar.itiraf_durum', 1);
+        $query = $this->db->get('itiraflar')->result();
         return $query;
     }
-    public function brkdndr_anasayfa_itiraf_icerik($id){
-        $this->db->select('brkdndr_itiraflar.*');
-        $this->db->where('brkdndr_itiraflar.itiraf_durum', 1);
-        $this->db->where('brkdndr_itiraflar.id', $id);
-        $query = $this->db->get('brkdndr_itiraflar');
+    public function anasayfa_itiraf_icerik($id){
+        $this->db->select('itiraflar.*');
+        $this->db->where('itiraflar.itiraf_durum', 1);
+        $this->db->where('itiraflar.id', $id);
+        $query = $this->db->get('itiraflar');
         return $query->row();
     }
 
-    public function brkdndr_anasayfa_itiraf($id){
-        $this->db->where('brkdndr_itiraflar.id', $id);
-        $query = $this->db->get('brkdndr_itiraflar');
+    public function anasayfa_itiraf($id){
+        $this->db->where('itiraflar.id', $id);
+        $query = $this->db->get('itiraflar');
         return $query->row();
     }
 
-    public function brkdndr_itiraf_sayaci($id){
-        $brkdndr_itiraflar = $this->anasayfa_model->brkdndr_anasayfa_itiraf($id);
+    public function itiraf_sayaci($id){
+        $itiraflar = $this->anasayfa_model->anasayfa_itiraf($id);
 
         if (get_cookie('itiraf_hit_' . $id) != 1) {
             set_cookie('itiraf_hit_' . $id, '1');
             $data = array(
-                'itiraf_goruntulenme' => $brkdndr_itiraflar->itiraf_goruntulenme + 1
+                'itiraf_goruntulenme' => $itiraflar->itiraf_goruntulenme + 1
             );
 
             $this->db->where('id', $id);
-            $this->db->update('brkdndr_itiraflar', $data);
+            $this->db->update('itiraflar', $data);
         }
 
     }
 
-    public function brkdndr_itiraf_sayisi(){
-        $this->db->select('brkdndr_itiraflar.*');
-        $this->db->where('brkdndr_itiraflar.itiraf_durum', 1);
-        $this->db->order_by('brkdndr_itiraflar.id', 'DESC');
-        $query = $this->db->get('brkdndr_itiraflar');
+    public function itiraf_sayisi(){
+        $this->db->select('itiraflar.*');
+        $this->db->where('itiraflar.itiraf_durum', 1);
+        $this->db->order_by('itiraflar.id', 'DESC');
+        $query = $this->db->get('itiraflar');
         return $query->num_rows();
     }
 
-    public function brkdndr_sayfalama_itiraflari($per_page, $offset){
-        $this->db->select('brkdndr_itiraflar.*');
-        $this->db->where('brkdndr_itiraflar.itiraf_durum', 1);
-        $this->db->order_by('brkdndr_itiraflar.id', 'DESC');
+    public function sayfalama_itiraflari($per_page, $offset){
+        $this->db->select('itiraflar.*');
+        $this->db->where('itiraflar.itiraf_durum', 1);
+        $this->db->order_by('itiraflar.id', 'DESC');
         $this->db->limit($per_page, $offset);
-        $query = $this->db->get('brkdndr_itiraflar');
+        $query = $this->db->get('itiraflar');
         return $query->result();
     }
 
     public function insert($data){
 
-        $insert = $this->db->insert("brkdndr_itiraflar", $data);
+        $insert = $this->db->insert("itiraflar", $data);
         return $insert;
 
     }
 
     public function itiraf_yorumlari($id){
-        $this->db->join('brkdndr_itiraflar', 'brkdndr_itiraf_yorumlar.itiraf_id = brkdndr_itiraflar.id');
-        $this->db->where('brkdndr_itiraflar.id', $id);
-        $this->db->where('brkdndr_itiraf_yorumlar.yorum_durum', 1);
-        $this->db->select('brkdndr_itiraf_yorumlar.*');
-        $this->db->order_by('brkdndr_itiraf_yorumlar.id', 'DESC');
-        $query = $this->db->get('brkdndr_itiraf_yorumlar');
+        $this->db->join('itiraflar', 'itiraf_yorumlar.itiraf_id = itiraflar.id');
+        $this->db->where('itiraflar.id', $id);
+        $this->db->where('itiraf_yorumlar.yorum_durum', 1);
+        $this->db->select('itiraf_yorumlar.*');
+        $this->db->order_by('itiraf_yorumlar.id', 'DESC');
+        $query = $this->db->get('itiraf_yorumlar');
         return $query->result();
     }
 }

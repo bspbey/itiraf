@@ -5,7 +5,7 @@ class Yorumlar_model extends CI_Model {
 
 	public function get_all(){
 		
-        $result = $this->db->get("brkdndr_itiraf_yorumlar")->result();
+        $result = $this->db->get("itiraf_yorumlar")->result();
         
         return $result;
 	}

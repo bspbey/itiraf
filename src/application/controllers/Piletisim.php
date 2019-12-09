@@ -12,15 +12,15 @@ class Piletisim extends Genel_MY_Controller {
 
 	public function index()
 	{
-        $brkdndr_genel_ayarlar = $this->ayarlar_model->get_all();
+        $genel_ayarlar = $this->ayarlar_model->get_all();
 
         $data = array(
-            'genel_ayarlar' => $brkdndr_genel_ayarlar
+            'genel_ayarlar' => $genel_ayarlar
         );
         $this->load->view("iletisim", $data);
 	}
 
-    public function brkdndr_form_gonder(){
+    public function form_gonder(){
         $gonderen_ad_soyad = $this->input->post("gonderen_ad_soyad");
         $gonderen_email = $this->input->post("gonderen_email");
         $konu    = $this->input->post("konu");

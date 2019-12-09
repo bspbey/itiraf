@@ -61,9 +61,9 @@ $route['default_controller'] = 'Anasayfa';
 $route['anasayfa'] = 'Anasayfa/index';
 $route['yorum-ekle'] = 'Anasayfa/yorum_ekle/insert';
 $route['iletisim'] = 'Piletisim/index';
-$route['iletisim/gonder'] = 'Piletisim/brkdndr_form_gonder';
-$route['itiraf/(:num)'] = 'Anasayfa/brkdndr_itiraf_icerik/$1';
-$route['itiraf/ekle'] = 'Anasayfa/brkdndr_insert';
+$route['iletisim/gonder'] = 'Piletisim/form_gonder';
+$route['itiraf/(:num)'] = 'Anasayfa/itiraf_icerik/$1';
+$route['itiraf/ekle'] = 'Anasayfa/insert';
 //
 $route['admin/itiraflar'] = 'admin/Pitiraflar/index';
 $route['admin/itiraflar/duzenle'] = 'admin/Pitiraflar/update_form';

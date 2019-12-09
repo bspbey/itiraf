@@ -63,6 +63,26 @@ if($alert){ ?>
 </div>
 <input type="text" class="form-control" name="anasayfa_itiraf_sayisi" value="<?php echo $row->anasayfa_itiraf_sayisi; ?>">
 </div>
+<br>
+<div class="input-group">
+<div class="input-group-prepend">
+<span class="input-group-text">İtiraflar admin onayından geçsin mi?</span>
+</div>
+<select class="form-control" name="itiraf_onay">
+<option value="1" <?php if($row->itiraf_onay==1) { echo "selected"; } ?>>Evet</option>
+<option value="0" <?php if($row->itiraf_onay==0) { echo "selected"; } ?>>Hayır</option>
+</select>
+</div>
+<br>
+<div class="input-group">
+<div class="input-group-prepend">
+<span class="input-group-text">Yorumlar admin onayından geçsin mi?</span>
+</div>
+<select class="form-control" name="yorum_onay">
+<option value="1" <?php if($row->yorum_onay==1) { echo "selected"; } ?>>Evet</option>
+<option value="0" <?php if($row->yorum_onay==0) { echo "selected"; } ?>>Hayır</option>
+</select>
+</div>
 </div>
 <!-- genel ayarlar -->
 

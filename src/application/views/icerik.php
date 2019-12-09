@@ -15,7 +15,7 @@ $itiraf_icerik_v2 = $metin;
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title><?php echo strip_tags($itiraf_icerik->itiraf_rumuz); ?> İtirafı | <?php echo strip_tags($ayarlar->site_title); ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Burak Dündar" />
 <meta name="description" content="<?php echo strip_tags($itiraf_icerik_v2); ?>...">
 <meta name="keywords" content="<?php echo strip_tags($ayarlar->site_keywords); ?>">
@@ -102,6 +102,9 @@ if($alert){ ?>
 </div>
 </div>
 <div class="card-body">
+<?php if($itiraf_icerik->itiraf_resim){ ?>
+<img src="<?php echo base_url("uploads/$itiraf_icerik->itiraf_resim"); ?>" style="float:left;border-radius:15px;padding:5px;position:relative;left:-10px;" width="200">
+<?php } ?>
 <p class="card-text"><?php echo strip_tags($itiraf_icerik->itiraf_icerik); ?></p>
 </div>
 <div class="card-footer text-muted"><?php $tarih = $itiraf_icerik->createdAt; echo $this->fonksiyonlar->timeConvert($tarih); ?> - <?php if($itiraf_icerik->itiraf_cinsiyet=='1'){echo "Erkek"; } else if($itiraf_icerik->itiraf_cinsiyet=='2'){echo "Kadın"; } else { echo "Cinsiyet Belirtilmemiş";} ?></div>
