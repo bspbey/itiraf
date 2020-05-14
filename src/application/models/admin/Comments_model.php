@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Yorumlar_model extends CI_Model {
+class Comments_model extends CI_Model {
 
 	public function get_all(){
 		
-        $result = $this->db->get("itiraf_yorumlar")->result();
+        $result = $this->db->get("confession_comments")->result();
         
         return $result;
 	}
