@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'buraya veritabanı sunucunuzun adı',
-	'username' => 'buraya veritabanı kullanıcı adınız',
-	'password' => 'buraya veritabanı şifreniz',
-	'database' => 'buraya veritabanı adınız',
+	'hostname' => 'sql211.unaux.com',
+	'username' => 'unaux_31890947',
+	'password' => '7mfb9dgpfhj',
+	'database' => 'unaux_31890947_itiraf',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
